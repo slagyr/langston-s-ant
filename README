@@ -1,0 +1,17 @@
+== Langston's Ant
+
+A classic simulation of life and evolution.  I use the example for a Ruby Kata.
+
+	http://blog.8thlight.com/articles/2008/11/13/kata-langston-s-ant-in-ruby
+	
+The Ant has been implemented dozens of times as a kata.  The remains of the many of the solutions can be found in
+
+	./old
+	
+== Running the Simulation
+
+This is a Limelight production.  Assuming you have the Limelight gem installed you can run the simulation like so:
+
+	jruby -S limelight open langston-s-ant
+	
+If you have Limelight installed as an application, then choose the langston-s-ant directory when using the open menu option.
