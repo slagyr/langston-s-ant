@@ -10,7 +10,7 @@ If the ant is on a white dot, paint it black and go left.
 END
 
 __ :name => "earth"
-title :text => "Langston's Ant Example"
+title :text => "Langton's Ant Example"
 left_col do
   description :text => description_text
   log :id => "log" do
@@ -23,6 +23,6 @@ left_col do
     step_button :text => "Step", :players => "button", :id => "step_button"
     black_button :text => "Go Black", :players => "button", :on_mouse_clicked => "scene.find('world').paint_it_black", :width => 100
   end
-  go_link :text => "Go to Real Langston's Ant", :on_mouse_clicked => "scene.load('langstons_ant')"
+  go_link :text => "Go to Real Langton's Ant", :on_mouse_clicked => "scene.load('langtons_ant')"
 end
 world :id => "world"

@@ -7,7 +7,7 @@ module World
   
   attr_accessor :world
 
-  def draw_grid(pen = nil)
+  def draw_grid(pen = nil)    
     pen = self.pen if pen.nil?
     area = bordered_area
     pen.color = '#bbb'
@@ -17,11 +17,21 @@ module World
       pen.draw_line(area.left, x, area.right, x)
       x += 5
     end
+    
+    @world.size.times do |x|
+      @world.size.times do |y|
+        if @world.black?(x, y)
+          paint_cell(x, y, "black", pen)
+        else
+          paint_cell(x, y, "white", pen)
+        end
+      end
+    end
   end
   
-  def paint_cell(x, y, color)
+  def paint_cell(x, y, color, pen = nil)
     area = bordered_area
-    pen = self.pen
+    pen = self.pen if pen.nil?
     x2 = x * 5 + 2  
     y2 = y * 5 + 2
     pen.color = color

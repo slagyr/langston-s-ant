@@ -10,8 +10,8 @@
 #  end
 
 stage "default" do
-  default_scene "explanation" #"langstons_ant"
-  title "Langston's Ant"
+  default_scene "explanation" 
+  title "Langton's Ant"
   location [200, 25]
-  size [800, 800]
+  size :auto, :auto
 end

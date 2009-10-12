@@ -1,9 +1,40 @@
-# This file (production.rb) configures the production. It is the first file loaded when production is opened.
+module Production
 
-# The name of the production.  If not present, the production's name will default to the name of the root directory.
-name "Langstons Ant"
+  def name
+    return "Langton's Ant"
+  end
 
-# Attributes.  Defining attributes on the production will create getters/setters on the production object.
-# Create attributes for any model objects or resources that need to accessible to props or players within the production
+  # Hook #1.  Called when the production is newly created, before any loading has been done.
+  # This is a good place to require needed files and instantiate objects in the busines layer.
+  def production_opening
+    $: << File.expand_path(File.dirname(__FILE__) + "/lib")
+    $: << File.expand_path(File.dirname(__FILE__) + "/old")
+    
+    require 'world'  
+  end
+# 
+# # Hook #2.  Called after internal gems have been loaded and stages have been instantiated, yet before
+# # any scenes have been opened.
+# def production_loaded
+# end
+# 
+# # Hook #3.  Called when the production, and all the scenes, have fully opened.
+# def production_opened
+# end
+# 
+#  # The system will call this methods when it wishes to close the production, perhaps when the user quits the
+#  # application.  By default the production will always return true. You may override this behavior by re-implenting
+#  # the methods here.
+#  def allow_close?
+#    return true
+#  end
+#
+#  # Called when the production is about to be closed.
+#  def production_closing
+#  end
+#
+#  # Called when the production is fully closed.
+#  def production_closed
+#  end
 
-#attribute :attribute_name
+end

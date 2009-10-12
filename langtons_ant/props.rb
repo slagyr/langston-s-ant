@@ -10,7 +10,7 @@ If the ant is on a white dot, paint it black and go left.
 END
 
 __ :name => "earth"
-title :text => "Langston's Ant"
+title :text => "Langton's Ant"
 left_col do
   description :text => description_text
   log :id => "log" do
