@@ -8,7 +8,6 @@ module Production
   # This is a good place to require needed files and instantiate objects in the busines layer.
   def production_opening
     $: << File.expand_path(File.dirname(__FILE__) + "/lib")
-    $: << File.expand_path(File.dirname(__FILE__) + "/old")
     
     require 'world'  
   end

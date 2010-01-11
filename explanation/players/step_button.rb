@@ -11,9 +11,9 @@ module StepButton
 
   def prepare_ant
     @steps = 0
-    require 'slow_ant'
+    require 'ant'
     @world = scene.find("world")
-    @ant = SlowAnt.new(@world.world) if @ant.nil?
+    @ant = ::Ant.new(@world.world) if @ant.nil?
   end
 
   def log

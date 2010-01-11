@@ -23,6 +23,6 @@ left_col do
     step_button :text => "Step", :players => "button", :id => "step_button"
     black_button :text => "Go Black", :players => "button", :on_mouse_clicked => "scene.find('world').paint_it_black", :width => 100
   end
-  go_link :text => "Go to Real Langton's Ant", :on_mouse_clicked => "scene.load('langtons_ant')"
+  go_link :text => "Use Large Simulation", :on_mouse_clicked => "scene.load('langtons_ant')"
 end
 world :id => "world"
